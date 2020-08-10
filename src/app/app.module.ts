@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { Test01Component } from './test01/test01.component';
 import { LoginComponent } from './login/login.component';
 import { ErrorComponent } from './error/error.component';
 import { ListTodosComponent } from './list-todos/list-todos.component';
@@ -20,7 +19,6 @@ import {HttpIntercepterBasicAuthService} from './service/http/http-intercepter-b
   declarations: [
     AppComponent,
     WelcomeComponent,
-    Test01Component,
     LoginComponent,
     ErrorComponent,
     ListTodosComponent,
@@ -37,7 +35,6 @@ import {HttpIntercepterBasicAuthService} from './service/http/http-intercepter-b
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: HttpIntercepterBasicAuthService, multi: true}
-  ],
-  bootstrap: [AppComponent]
+  ],  bootstrap: [AppComponent]
 })
 export class AppModule { }
